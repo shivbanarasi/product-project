@@ -1,9 +1,8 @@
-const path=require('path');
+//const path=require('path');
 const express=require('express');
 const route=express.Router();
+const concontroller=require('../controllers/contact')
 
-route.get('/',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,'../','views','contactus.html'))
-})
+route.get('/',concontroller.contactcontroller);
 
 module.exports=route

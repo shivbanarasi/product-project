@@ -1,8 +1,7 @@
-const path=require('path');
+//const path=require('path');
 const express=require('express');
 const route=express.Router();
+const procontroller=require('../controllers/addpro')
 
-route.get('/add-product',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,'../','views','product.html'));
-});
+route.get('/add-product',procontroller.getproducts);
 module.exports=route;

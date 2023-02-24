@@ -1,8 +1,8 @@
 const path=require('path');
 const express=require('express');
 const route=express.Router();
+const susscontroller=require('../controllers/sucess')
 
-route.get('/',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,'../','views','sucess.html'));
-});
+
+route.get('/',susscontroller.sucesscontroller);
 module.exports=route;
